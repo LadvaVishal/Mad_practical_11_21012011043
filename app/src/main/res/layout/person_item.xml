@@ -61,6 +61,7 @@
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/locationBtn"
                 style="?materialIconButtonFilledStyle"
                 android:layout_width="65dp"
                 android:layout_height="64dp"
