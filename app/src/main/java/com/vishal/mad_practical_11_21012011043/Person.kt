@@ -1,9 +1,7 @@
-package com.vishal.mad_practical_10_21012011043
+package com.vishal.mad_practical_11_21012011043
 
-import android.location.Address
 import org.json.JSONObject
 import java.io.Serializable
-import java.util.jar.Attributes
 
 class Person ( var id:String,
                var name:String,

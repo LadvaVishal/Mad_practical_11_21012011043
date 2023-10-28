@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.vishal.mad_practical_10_21012011043'
+    namespace 'com.vishal.mad_practical_11_21012011043'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.vishal.mad_practical_10_21012011043"
+        applicationId "com.vishal.mad_practical_11_21012011043"
         minSdk 21
         targetSdk 33
         versionCode 1

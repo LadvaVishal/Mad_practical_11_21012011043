@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -9,69 +10,65 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginHorizontal="50dp"
-        app:cardElevation="20dp">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        app:cardElevation="20dp" >
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" >
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/material_btn"
-                android:layout_width="65dp"
+                android:layout_gravity="center"
+                android:id="@+id/person_image"
+                style="?materialIconButtonFilledStyle"
+                android:layout_width="64dp"
                 android:layout_height="64dp"
                 app:icon="@drawable/baseline_person_24"
                 app:iconGravity="textStart"
-                app:iconSize="40dp"
-                style="?materialIconButtonFilledStyle"
+                app:iconSize="46dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
             <LinearLayout
-
-                android:id="@+id/linearLayout"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/person_image"
+                android:orientation="vertical" >
                 <TextView
-                    android:id="@+id/person_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="person Name" />
-
+                    android:id="@+id/textName1"
+                    android:text="Yesenia Yang"/>
                 <TextView
-                    android:id="@+id/personnumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Person Number" />
-
+                    android:id="@+id/text_no"
+                    android:text="+919925053674"/>
                 <TextView
-                    android:id="@+id/personemail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Person Email" />
-
+                    android:id="@+id/textemail"
+                    android:text="yesenia_yang@gnu.ac.in"/>
                 <TextView
-                    android:id="@+id/personaddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Person Address" />
+                    android:id="@+id/textaddress"
+                    android:text="16,Sackett Street,Courtland,Michigan"/>
             </LinearLayout>
-
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/locationBtn"
-                style="?materialIconButtonFilledStyle"
-                android:layout_width="65dp"
+                android:layout_width="64dp"
                 android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:id="@+id/location"
                 app:icon="@drawable/baseline_location_on_24"
-                app:iconGravity="textStart"
-                app:iconSize="40dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/linearLayout"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+                style="?materialIconButtonFilledStyle"
+                app:iconSize="46dp"
+                app:iconGravity="textEnd"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

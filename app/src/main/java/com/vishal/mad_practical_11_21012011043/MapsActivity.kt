@@ -1,4 +1,4 @@
-package com.vishal.mad_practical_10_21012011043
+package com.vishal.mad_practical_11_21012011043
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.vishal.mad_practical_10_21012011043.databinding.ActivityMapsBinding
+import com.vishal.mad_practical_11_21012011043.databinding.ActivityMapsBinding
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
