@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.TextView
 
-class PersonAdapter(val context: Context,val personArray:ArrayList<Person>):ArrayAdapter<Person>(context,0,personArray)
+class PersonAdapter( context: Context,val personArray:ArrayList<Person>):ArrayAdapter<Person>(context,0,personArray)
 {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view=LayoutInflater.from(context).inflate(R.layout.person_item,parent,false)

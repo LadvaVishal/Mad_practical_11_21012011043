@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
                 try {
                     val data = HttpRequest().makeServiceCall(
                         "https://api.json-generator.com/templates/qjeKFdjkXCdK/data",
-                        "dchj8v1b6qqdjzbqood1jgpachyfzlw58r540gru")
+                        "rbn0rerl1k0d3mcwgw7dva2xuwk780z1hxvyvrb1")
                     withContext(Dispatchers.Main) {
                         try {
                             if(data != null)
@@ -57,21 +57,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun setArrayToListView(){
-
-
-        val personlistview=findViewById<ListView>(R.id.listView1)
-        val Array = arrayListOf<Person>(
-            Person("1","vishal","ladavavishal22@gmail.com","9081897150","Veraval",90.90,909.90),
-            Person("2","harshal","harshal21@gmail.com","9081897151","Rajkot",90.90,909.90),
-            Person("3","jay","jay22@gmail.com","9081897152","Mehasana",90.90,909.90),
-            Person("4","vivek","vivek@gmail.com","9081897153","Morbi",90.90,909.90),
-            Person("5","jvk","jvk@gmail.com","9725240046","surat",90.90,909.90)
-        )
-        personlistview.adapter=PersonAdapter(this,Array)
-
-
-    }
 
    
 }
