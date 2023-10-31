@@ -1,7 +1,8 @@
 package com.vishal.mad_practical_11_21012011043
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -16,8 +17,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
 
+    private val TAG = "MapActivity"
+    private var lat = -34.0
+    private var log = 151.0
+    private var title = "Marker in Sydney"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val obj = intent.getSerializableExtra("Object") as Person
+        Log.i(TAG, "onCreate: Object:$obj")
+        lat = obj.latitude
+        log = obj.longitude
+        title = obj.name
 
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -41,8 +53,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val sydney = LatLng(lat, log)
+        mMap.addMarker(MarkerOptions().position(sydney).title(title))
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 8.0f))
     }
 }

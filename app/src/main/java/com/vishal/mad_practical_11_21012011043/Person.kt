@@ -1,17 +1,16 @@
 package com.vishal.mad_practical_11_21012011043
-
 import org.json.JSONObject
 import java.io.Serializable
 
-class Person ( var id:String,
-               var name:String,
-               var emailId:String,
-               var phoneNo:String,
-               var address:String,
-               var latitude:Double,
-               var longitude:Double
-):Serializable{
-    constructor(jsonObject:JSONObject):this("","","","","",0.0,8.0) {
+class Person (
+    var id:String,
+    var name:String,
+    var emailId:String,
+    var phoneNo: String,
+    var address :String,
+    var latitude:Double,
+    var longitude:Double):Serializable {
+    constructor(jsonObject:JSONObject):this ("","","","","",90.0,09.8){
         id = jsonObject.getString("id")
         emailId = jsonObject.getString("email")
         phoneNo = jsonObject.getString("phone")
@@ -22,4 +21,5 @@ class Person ( var id:String,
         latitude = locationJson.getDouble("lat")
         longitude = locationJson.getDouble("long")
     }
+
 }
