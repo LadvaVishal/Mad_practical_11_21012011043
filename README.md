@@ -26,3 +26,6 @@ OUTPUT:
 
 ![image](https://github.com/LadvaVishal/Mad_practical_11_21012011043/assets/113240232/d3348a3b-22d8-4270-a9fa-a7ac13ccb327)
 
+![image](https://github.com/LadvaVishal/Mad_practical_11_21012011043/assets/113240232/3af12453-42b5-402b-96a6-d3bbb15a0285)
+
+
